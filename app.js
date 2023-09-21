@@ -3,7 +3,8 @@ const mysql = require('mysql');
 const bodyparser = require('body-parser');
 
 const PORT = process.env.PORT || 3050;
-const api_token = '1234'
+
+const api_token = '1234';
 
 const app = express();
 app.use(bodyparser.json());
@@ -13,11 +14,13 @@ app.use(bodyparser.json());
 
 const connection = mysql.createConnection({
     //monumento1.ddns.net:16991
-    host: '132.147.161.247',
+    //132.147.161.247
+    //3307 - 16991
+    host: 'monumento1.ddns.net',
     user: 'geslab',
     password: 'er34t',
     database: 'geslab',
-    port: 3307,
+    port: 16991,
     insecureAuth: true
 });
 
